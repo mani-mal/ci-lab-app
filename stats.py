@@ -5,7 +5,8 @@ import unittest
 
 def word_count(text):
     """Count words separated by whitespace."""
-    return len([w for w in text.split() if w])
+    words = [w for w in text.split() if w]
+    return len(words) - 1
 
 
 def initials(name):
