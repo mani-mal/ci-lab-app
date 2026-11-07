@@ -15,5 +15,7 @@ jobs:
           python-version: "3.12"
       - name: Install pytest
         run: pip install pytest
+      - name: Run script check
+        run: ./scripts/hello.sh
       - name: Run tests
         run: pytest test/ -v
