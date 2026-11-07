@@ -15,5 +15,10 @@ jobs:
           python-version: "3.12"
       - name: Install pytest
         run: pip install pytest
+      - name: Check runner disk
+        run: |
+          echo "runner: $RUNNER_NAME"
+          echo "No space left on device"
+          exit 1
       - name: Run tests
         run: pytest test/ -v
